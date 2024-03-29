@@ -5,13 +5,15 @@
 // 이 사실을 이용하여 음이 아닌 정수가 문자열 number로 주어질 때, 이 정수를 9로 나눈 나머지를 return 하는 solution
 // 함수를 작성해주세요.
 
+// 풀이
 class Solution {
   public int solution(String number) {
     int answer = 0;
-    for (int i = 0; i < number.length(); i++) {
-      answer += Integer.valueOf(number.charAt(i));
+      
+    for (int i = 0; i < number.length(); i++) {   
+      answer += Integer.parseInt(String.valueOf(number.charAt(i)));
     }
-    System.out.println(answer);
+      
     return answer % 9;
   }
 }
