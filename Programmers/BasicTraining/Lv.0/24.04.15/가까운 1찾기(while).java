@@ -9,14 +9,13 @@
 class Solution {
   public int solution(int[] arr, int idx) {
     int answer = -1;
-    int i = idx;
-
-    while (arr[i] == 1) {
-      if (arr[i] == 1) {
-        answer = i;
+      
+    while (idx < arr.length) {
+      if (arr[idx] == 1) {
+        answer = idx;
         break;
       }
-      i++;
+      idx++;
     }
     return answer;
   }
