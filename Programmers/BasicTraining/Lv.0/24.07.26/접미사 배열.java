@@ -15,7 +15,6 @@ class Solution {
       answer[i] = my_string.substring(i);
     }
     Arrays.sort(answer);
-
     return answer;
   }
 }
