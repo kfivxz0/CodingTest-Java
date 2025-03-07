@@ -1,0 +1,16 @@
+// https://school.programmers.co.kr/learn/courses/30/lessons/131114
+// 문제 설명
+// 다음은 식품창고의 정보를 담은 FOOD_WAREHOUSE 테이블입니다. FOOD_WAREHOUSE 테이블은 다음과 같으며 WAREHOUSE_ID, WAREHOUSE_NAME, ADDRESS, TLNO, FREEZER_YN는 창고 ID, 창고 이름, 창고 주소, 전화번호, 냉동시설 여부를 의미합니다.
+
+// Column name	Type	Nullable
+// WAREHOUSE_ID	VARCHAR(10)	FALSE
+// WAREHOUSE_NAME	VARCHAR(20)	FALSE
+// ADDRESS	VARCHAR(100)	TRUE
+// TLNO	VARCHAR(20)	TRUE
+// FREEZER_YN	VARCHAR(1)	TRUE
+
+// 풀이
+SELECT WAREHOUSE_ID, WAREHOUSE_NAME, ADDRESS, ifnull(FREEZER_YN, 'N') AS FREEZER_YN
+FROM FOOD_WAREHOUSE
+WHERE ADDRESS like '경기도%'
+ORDER BY WAREHOUSE_ID ASC;
